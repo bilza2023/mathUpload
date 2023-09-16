@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.min-height-class {
+    min-height: 60px;
+}
+
+</style>
+    <meta charset="UTF-8">
+    <title>Math Upload</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include the KaTeX CSS file from the KaTeX CDN -->
+
+    <script src="./katex0_13_18.js"></script>
+
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+
+<body class="bg-gray-700 text-white">
+
+<!--  nav bar -->
+<div class="flex justify-left bg-gray-900 p-2">
+<a class="bg-blue-800 p-1   rounded-sm" href="/">Home</a>
+&nbsp;
+<button id="saveBtn" class="bg-green-800 p-1   rounded-sm">Save</button>
+</div>
+
+<!--  container div -->
+<div class="m-4 p-0">
+
+    <div class="flex justify-center">
+    <h1 class="bg-gray-900 p-2 m-2 text-xl rounded-md">Editor</h1>
+    </div>
+  
+  
+    <!---the title bar-->
+    <div class="flex w-full justify-center text-lg">
+        <div class="w-1/12 bg-gray-600 text-center">Step</div>
+        <div class="w-1/12 bg-gray-600 text-center">Time</div>
+        <div class="w-5/12 bg-gray-600 text-center">Editor</div>
+        <div class="w-5/12 bg-gray-600 text-center">Dsiplay</div>
+    </div>
+
+    <div id="mathDiv" type="module"></div>
+  
+</div>  
+
+<br/>
+
+
+
+<div class="flex justify-center">
+  <button id="saveBtn" class="w-10/12 bg-green-800 p-2  rounded-md text-xl">Save</button>
+</div>
+
+<script src="main.js" ></script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>

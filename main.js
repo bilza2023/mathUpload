@@ -38,7 +38,8 @@
             const btnsDiv = addBtnsDiv(i);
             mathDiv.appendChild(btnsDiv);            
         }
- }
+}
+
 function addBtnsDiv(i) {
   // Create a new div element for buttons
   let div = document.createElement('div');
@@ -55,7 +56,7 @@ function addBtnsDiv(i) {
   // Create AddBtn
   // Create Add button
   const addBtn = document.createElement('button');
-  addBtn.classList.add("bg-purple-500");
+  addBtn.classList.add("bg-green-900");
   addBtn.classList.add("text-white");
   addBtn.classList.add("p-1"); // Very slim button
   addBtn.classList.add("text-xs"); // Very slim button
@@ -69,7 +70,7 @@ function addBtnsDiv(i) {
 
   // Create MoveUpBtn
   const moveUpBtn = document.createElement('button');
-  moveUpBtn.classList.add("bg-blue-500");
+  moveUpBtn.classList.add("bg-gray-600");
   moveUpBtn.classList.add("text-white");
   moveUpBtn.classList.add("p-1"); // Very slim button
   moveUpBtn.classList.add("text-xs"); // Very slim button
@@ -87,7 +88,7 @@ function addBtnsDiv(i) {
 
   // Create MoveDownBtn
   const moveDownBtn = document.createElement('button');
-  moveDownBtn.classList.add("bg-green-500");
+  moveDownBtn.classList.add("bg-gray-600");
   moveDownBtn.classList.add("text-white");
   moveDownBtn.classList.add("p-1"); // Very slim button
   moveDownBtn.classList.add("text-xs"); // Very slim button
@@ -105,7 +106,7 @@ function addBtnsDiv(i) {
 
   // Create DeleteBtn
   const deleteBtn = document.createElement('button');
-  deleteBtn.classList.add("bg-red-500");
+  deleteBtn.classList.add("bg-red-800");
   deleteBtn.classList.add("text-white");
   deleteBtn.classList.add("p-1"); // Very slim button
   deleteBtn.classList.add("text-xs"); // Very slim button
@@ -125,7 +126,6 @@ function addBtnsDiv(i) {
 
   return div;
 }
-
 
 function addWrapperDiv(i){
             // Create a new div element for each equation
@@ -160,7 +160,7 @@ function addEqDiv(i){
 
 function addTimeDiv(i){
   let div = document.createElement('input');
-            div.classList.add("bg-red-900");
+            div.classList.add("bg-gray-900");
             div.classList.add("w-1/12");
             div.classList.add("p-0");
             div.classList.add("m-0");
@@ -169,6 +169,7 @@ function addTimeDiv(i){
             div.value = eqs[i].time;
             return div;
 }
+
 function addIndexDiv(i){
   let div = document.createElement('span');
             div.classList.add("bg-stone-900");
@@ -208,7 +209,19 @@ function newItem(){
 }
 
 document.getElementById('saveBtn').addEventListener('click',function(){
-    console.log("eqs",eqs);
+        const question = [];   
+        let time = 0; 
+
+    for (let i = 0; i < eqs.length; i++) {
+        const eq = eqs[i];
+        const n = {};
+        n.step = i+1;
+        n.code = eq.code;
+        n.time = time;
+                time +=2;
+                question.push(n);
+    }
+    console.log("question",JSON.stringify(question));
 });
 //==This is for the first time only
 action();
