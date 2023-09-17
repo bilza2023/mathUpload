@@ -1,15 +1,11 @@
 import createElement from "./createElement.js";
+import getSP from "./sp.js";
   let eqs = [
-{time:0,code: "\\frac{1}{\\sqrt{2}}" },
-{time:0,code: "E=mc^2" },
-{time:0,code: "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}" },
-{time:0,code: "\\int_{0}^{\\pi} \\sin(x) dx = 2" },
-{time:0,code: "\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1" },
-{time:0,code: "\\sqrt{a^2 + b^2}" },
-{time:0,code: "F = G\\frac{m_1m_2}{r^2}" },
-{time:0,code: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}" },
-{time:0,code: "\\frac{d}{dx}e^x = e^x" },
-{time:0,code: "\\vec{F} = m\\vec{a}" },
+{time:0,code: "\\frac{1}{\\sqrt{2}}",
+sp: [
+{ code: "\\frac{1}{\\sqrt{2}}" , type:'code' }
+
+] }
 ];
 
  function action(){
@@ -38,7 +34,10 @@ import createElement from "./createElement.js";
             mathDiv.appendChild(wrapperDiv);            
 
             const btnsDiv = addBtnsDiv(i);
-            mathDiv.appendChild(btnsDiv);            
+            mathDiv.appendChild(btnsDiv);  
+            /////SP
+            const spDiv =  getSP(i,eqs[i]);
+            mathDiv.appendChild(spDiv);          
         }
 }
 
